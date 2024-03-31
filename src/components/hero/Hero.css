@@ -1,0 +1,116 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero__left {
+    width: 550px;
+    height: 454px;
+    margin-bottom: 50px;
+}
+
+.hero__left h4 {
+    padding-top: 130px;
+    color: rgb(33, 37, 41);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    text-align: left;
+}
+
+.hero__left h1 {
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 68px;
+    letter-spacing: 0.48px;
+    text-align: left;
+}
+
+.hero__left p {
+    color: rgb(122, 122, 122);
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26.25px;
+    letter-spacing: 0.48px;
+    text-align: left;
+    padding: 15px 0;
+}
+
+.demo {
+    color: #ff0000;
+}
+
+.hero__imput {
+    border-radius: 50px;
+    background: rgb(255, 255, 255);
+}
+
+.hero__imput input {
+    width: 292.45px;
+    height: 64px;
+    border-radius: 50px 0px 0px 50px;
+    padding-left: 60px;
+    padding-top: 5px;
+}
+
+.input__svg {
+    display: flex;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-top: -42px;
+}
+
+.hero__imput button {
+    display: inline;
+    width: 157.55px;
+    height: 64px;
+    margin-left: -30px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background: rgb(59, 183, 126);
+    color: rgb(255, 255, 255);
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.hero__right__buttn {
+    display: flex;
+    gap: 15px;
+    padding-top: 130px;
+}
+
+.hero__right__buttn button {
+    box-sizing: border-box;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+    color: rgb(59, 183, 126);
+    font-family: Quicksand;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 7px 18px;
+    transition: .4s;
+}
+
+.hero__right__buttn button:hover {
+    color: #000;
+}
+
+.bttn {
+    display: inline;
+    padding-top: 4px;
+}

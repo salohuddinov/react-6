@@ -1,0 +1,95 @@
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left {
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header__crntr {
+    display: flex;
+    gap: 40px;
+}
+
+.header__crntr h3 {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.48px;
+    text-align: left;
+    padding: 17px 0;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.header__crntr h3:hover {
+    box-shadow: 0 1px 0 #434343;
+}
+
+.centr__svg {
+    padding: 2px 2px;
+    padding-top: 6px;
+    font-size: 15px;
+}
+
+.header__right {
+    color: rgb(0, 0, 0);
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    letter-spacing: 0.48px;
+    text-align: left;
+}
+
+.header__bootm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottm__input {
+    display: flex;
+}
+
+.search {
+    border-radius: 5px;
+    border: 1px solid rgb(100, 180, 150);
+    width: 400px;
+    height: 45px;
+    padding-left: 20px;
+}
+
+.persuid {
+    display: flex;
+}
+
+.persuid h2 {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 130.92px;
+    height: 39px;
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.48px;
+    text-align: left;
+    transition: .4s;
+}
+
+.persuid h2:hover {
+    box-shadow: 0 1px 0 #434343;
+}
