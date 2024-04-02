@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./Header.css"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -15,7 +16,9 @@ function Header() {
             <div className="header__top">
                 <RxHamburgerMenu className='header__left' />
                 <div className="header__crntr">
-                    <h3>Home</h3>
+                    <Link to={"/"}>
+                        <h3>Home</h3>
+                    </Link>
                     <h3>Category<FaChevronDown className='centr__svg' /></h3>
                     <h3>Products<FaChevronDown className='centr__svg' /></h3>
                     <h3>Pages<FaChevronDown className='centr__svg' /></h3>
@@ -25,15 +28,28 @@ function Header() {
                 <h2 className='header__right'><FaPhoneAlt /> +123 ( 456 ) ( 7890 )</h2>
             </div>
             <div className="header__bootm">
-                <img src={herologo} alt="eagrse" />
-                <input class="search" type="text" placeholder="Search For items..." />
+                <Link to={"/"}>
+                    <img className='hb__img' src={herologo} alt="eagrse" />
+                </Link>
+                <div className="kombo">
+                    <input class="search__posk" type="text" placeholder="Search For items..." />
+                    <select className='changech' name="" id="">
+                        <option className='changech__opt' value="">All</option>
+                        <option value="">Electronic</option>
+                        <option value="">jewelory</option>
+                        <option value="">men's clothing</option>
+                        <option value="">women's clothing</option>
+                    </select>
+                </div>
                 <div className="persuid">
-                    <h2> <IoPerson />Account</h2>
+                    <Link to={"/loging"}>
+                        <h2><IoPerson />Account</h2>
+                    </Link>
                     <h2> <CiHeart />Wishlist</h2>
                     <h2> <TbShoppingCart />Cart</h2>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

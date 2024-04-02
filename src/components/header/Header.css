@@ -57,16 +57,23 @@
     align-items: center;
 }
 
-.bottm__input {
-    display: flex;
+.hb__img {
+    padding-right: 130px;
 }
 
-.search {
-    border-radius: 5px;
+.search__posk {
+    border-radius: 5px 0 0 5px;
     border: 1px solid rgb(100, 180, 150);
-    width: 400px;
+    width: 300px;
     height: 45px;
     padding-left: 20px;
+}
+
+.changech {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgb(100, 180, 150);
+    width: 100px;
+    height: 45px;
 }
 
 .persuid {

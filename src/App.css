@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -45,4 +46,11 @@ body {
 
 .btn__sds {
   padding-top: 5px;
+}
+
+.kombo {
+  display: flex;
+  width: 600px;
+  height: 45px;
+
 }

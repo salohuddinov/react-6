@@ -5,23 +5,47 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import SingleProduct from "../../pages/single-product/SingleProduct";
 import axios from 'axios';
+import { API_URL } from '../../static'
+import Skeleton from '../skeleton/Skeleton';
 
-const API_URL = "https://fakestoreapi.com/products/"
 
 
 function Prodact() {
     const [data, setData] = useState([])
     const [count, setCount] = useState(8)
     const [loding, setLoding] = useState(false)
+    const [categories, setCategories] = useState([])
+    const [categoryValue, setCategoryValue] = useState("")
+
+
+    useEffect(() => {
+        axios
+            .get(`${API_URL}/categories`)
+            .then(res => setCategories(res.data))
+            .catch(err => console.log(err))
+    }, [])
+
 
     useEffect(() => {
         setLoding(true)
+        let url = categoryValue === "" ?
+            `${API_URL}?limit=${count}` :
+            `${API_URL}/category/${categoryValue}?limit=${count}`
+
+        let user = { username: "johnd", password: "m38rmF$" }
+
         axios
-            .get(`${API_URL}?limit=${count}`)
+            .get(url, user)
             .then(res => setData(res.data))
             .catch(err => console.log(err))
             .finally(() => setLoding(false))
-    }, [count])
+    }, [count, categoryValue])
+
+    const getCategory = (text) => {
+        setCategoryValue(text)
+        setData([])
+    }
+
     let products = data?.map(el => (
         <div key={el.id} className="card">
             <Link to={`/product/${el.id}`}>
@@ -56,21 +80,17 @@ function Prodact() {
         </div>
     ))
 
+    let categoriesItem = categories?.map((el, inx) => <option key={inx} value={el}>{el}</option>)
+
     return (
         <>
             <div className='prodact'>
-                {loding &&
-                    <div className="loading">
-                        <div className="sharingon">
-                            <div className="ring">
-                                <div className="to"></div>
-                                <div className="to"></div>
-                                <div className="to"></div>
-                                <div className="circle"></div>
-                            </div>
-                        </div>
-                    </div>
-                }
+                {loding && <Skeleton />}
+
+                <select onChange={e => getCategory(e.target.value)} name="" id="">
+                    <option value="">All</option>
+                    {categoriesItem}
+                </select>
                 <div className="wrapper">{products}</div>
                 <button className='prodact__button' onClick={() => setCount(p => p + 4)}>Ess more</button>
             </div>

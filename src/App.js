@@ -1,7 +1,11 @@
 import './App.css';
-import Prodact from './components/prodact/Prodact';
 import Header from './components/header/Header';
-import Hero from './components/hero/Hero'
+import Home from './pages/home/Home';
+import { Routes, Route } from "react-router-dom"
+import SingleProduct from './pages/single-product/SingleProduct';
+import Loging from './pages/loging/Loging';
+import Auth from './pages/auth/Auth';
+import Admin from './pages/admin/Admin';
 
 
 function App() {
@@ -9,8 +13,14 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
-        <Hero />
-        <Prodact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<SingleProduct />} />
+          <Route path='/loging' element={<Loging />} />
+          <Route path='/' element={<Auth />}>
+            <Route path='/admin' element={<Admin />} />
+          </Route>
+        </Routes>
       </div>
     </div>
   );

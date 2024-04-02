@@ -1,27 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import "./SingleProduct.css"
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { API_URL } from '../../static'
 
-let API_URL = "https://fakestoreapi.com/products/"
 
 function SingleProduct() {
-    const [data, setData] = useState([])
+    const [product, setProduct] = useState(null)
+    const [loading, setLoding] = useState(false)
+    const { id } = useParams()
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+        setLoding(true)
         axios
-            .get(API_URL)
-            .then(res => setData(res.data))
+            .get(`${API_URL}/${id}`)
+            .then(res => setProduct(res.data))
             .catch(err => console.log(err))
-
+            .finally(() => setLoding(false))
     }, [])
-    let { id } = useParams
-    let products = data?.find(el => el.id === +id)
+
+    if (loading) {
+        return <div className="loading">
+            <div className="sharingon">
+                <div className="ring">
+                    <div className="to"></div>
+                    <div className="to"></div>
+                    <div className="to"></div>
+                    <div className="circle"></div>
+                </div>
+            </div>
+        </div>
+    }
+
     return (
         <div className='singleproduct'>
-            {
-                products
-            }
+            <img src={product?.image} alt="sg" />
         </div>
     )
 }
