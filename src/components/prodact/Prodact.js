@@ -87,7 +87,7 @@ function Prodact() {
             <div className='prodact'>
                 {loding && <Skeleton />}
 
-                <select onChange={e => getCategory(e.target.value)} name="" id="">
+                <select className='card__selection' onChange={e => getCategory(e.target.value)} name="" id="">
                     <option value="">All</option>
                     {categoriesItem}
                 </select>

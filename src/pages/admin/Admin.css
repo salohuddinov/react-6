@@ -34,12 +34,18 @@
     background: rgb(247, 247, 248);
     display: flex;
     justify-content: space-around;
+    transition: .4s;
 }
 
 .bootm__text {
     width: 203.33px;
     height: 92px;
     padding: 25px 0;
+    text-align: center;
+}
+
+.admin__left__bootm:hover {
+    box-shadow: 0 1px 5px 2px #ddd;
 }
 
 .bootm__text h3 {
@@ -52,12 +58,67 @@
     text-align: center;
 }
 
+.h3__span {
+    color: rgb(122, 122, 122);
+    font-family: Manrope;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
 .bootm__text p {
+    width: 88.25px;
+    height: 17px;
     color: rgb(33, 37, 41);
     font-family: Manrope;
     font-size: 16px;
     font-weight: 600;
     line-height: 16px;
     letter-spacing: 0.48px;
-    margin-left: 20px;
+}
+
+.admin__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.admin__card {
+    margin: 50px 0;
+    width: 306px;
+    height: 184px;
+    box-sizing: border-box;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(247, 247, 248);
+    text-align: center;
+    transition: .5s;
+}
+
+.admin__card:hover {
+    box-shadow: 0 1px 5px 2px #ddd;
+}
+
+.admin__card h2 {
+    color: rgb(43, 43, 45);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30.01px;
+    letter-spacing: 0.48px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.admin__card p {
+    width: 205.34px;
+    height: 42px;
+    color: rgb(122, 122, 122);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.48px;
+    margin: 0 auto;
 }

@@ -1,0 +1,266 @@
+.singleproduct {
+    display: flex;
+    gap: 25px;
+    margin: 55px 0;
+}
+
+
+
+
+.box {
+    padding: 25px;
+    max-width: 306px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(247, 247, 248);
+
+    .title {
+        color: rgb(43, 43, 45);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25.6px;
+        letter-spacing: 0.48px;
+        text-align: left;
+        text-transform: capitalize;
+        margin-bottom: 28px;
+        border-bottom: 1px solid rgb(233, 233, 233);
+    }
+
+    input {
+        width: 18px;
+        height: 18px;
+    }
+
+    .type {
+        display: flex;
+        gap: 3px;
+
+        margin-top: 28px;
+
+        h3 {
+            color: rgb(122, 122, 122);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0.48px;
+            text-align: left;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        .second {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 80px;
+        }
+    }
+
+    .tasks__2 {
+        .type {
+            span {
+                content: " ";
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                color: transparent;
+                margin-left: 150px;
+            }
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+    }
+
+    .tasks__4 {
+        .type {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-wrap: wrap;
+
+            button {
+                border: 1px solid rgb(233, 233, 233);
+                border-radius: 5px;
+                background: rgb(255, 255, 255);
+                padding: 6px 16px;
+            }
+        }
+    }
+
+    .selector {
+        h2 {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0.48px;
+            text-align: left;
+
+            span {
+                color: rgb(122, 122, 122);
+            }
+        }
+
+        button {
+            box-sizing: border-box;
+            border: 1px solid rgb(245, 62, 50);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 5px;
+            background: rgb(245, 62, 50);
+            padding: 12px 23px;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16.8px;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: capitalize;
+            margin: 20px auto;
+        }
+    }
+
+    .slider {
+        appearance: none;
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: rgb(247, 247, 248);
+        box-shadow: 0px 0px 8px 0px rgba(51, 51, 51, 0.2);
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        margin-bottom: 20px;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgb(245, 62, 50);
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: rgb(245, 62, 50);
+        cursor: pointer;
+    }
+}
+
+.revise {
+    margin: 15px 0;
+}
+
+
+.title__combo h2 {
+    color: rgb(43, 43, 45);
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    text-align: left;
+}
+
+.combo4 {
+    margin-left: 70px;
+    margin-top: -170px;
+}
+
+.titleh4 {
+    color: rgb(119, 119, 119);
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    margin-left: 40px;
+}
+
+.fost {
+    display: flex;
+    gap: 15px;
+}
+
+.single__price {
+    color: rgb(245, 62, 50);
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.01px;
+    letter-spacing: 0.48px;
+    text-align: left;
+}
+
+.single__img {
+    width: 469px;
+    height: 469px;
+}
+
+.product__count {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.product__count button {
+    width: 53.33px;
+    height: 24px;
+    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(245, 62, 50);
+    margin-top: 8px;
+}
+
+.addtocart {
+    width: 125.08px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgb(245, 62, 50);
+    border-radius: 5px;
+    background: rgb(245, 62, 50);
+    color: rgb(255, 255, 255);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.body {
+    display: block;
+    margin-left: 350px;
+    margin-top: -670px;
+    width: 866px;
+    height: 432.5px;
+    box-sizing: border-box;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.body__top {
+    display: flex;
+    gap: 20px;
+}

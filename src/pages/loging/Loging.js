@@ -28,7 +28,9 @@ function Loging() {
                     </span>
                     <h3>Forgot Password?</h3>
                 </div>
-                <button className='login'>Login</button>
+                <Link to={'/admin'}>
+                    <button className='login'>Login</button>
+                </Link>
             </div>
         </div>
     )
